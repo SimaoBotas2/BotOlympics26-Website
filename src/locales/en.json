@@ -191,14 +191,14 @@
         "img": "/assets/team/Beatriz_Bento.jpg"
       },
       {
-        "name": "Francisco Cunha",
-        "role": "Representative (NEEEC/AAC)",
-        "img": "/assets/team/Francisco_Cunha.jpg"
-      },
-      {
         "name": "Samuel Tomé",
         "role": "Representative (NEEEC/AAC)",
         "img": "/assets/team/Samuel_Tome.jpg"
+      },
+      {
+        "name": "Francisco Cunha",
+        "role": "Representative (NEEEC/AAC)",
+        "img": "/assets/team/Francisco_Cunha.jpg"
       },
       {
         "name": "Inês Miguel",
@@ -207,47 +207,47 @@
       },
       {
         "name": "Diogo Vasco",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Diogo_Vasco.jpg"
       },
       {
         "name": "David Oliveira",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/David_Oliveira.jpg"
       },
       {
         "name": "Gabriel Pinto",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Gabriel_Pinto.jpg"
       },
       {
         "name": "Rodrigo Gonçalves",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Rodrigo_Goncalves.jpg"
       },
       {
         "name": "Simão Rodrigues",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Simao_Rodrigues.jpg"
       },
       {
         "name": "Bruno Silva",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Bruno_Silva.jpg"
       },
       {
         "name": "Martim Pegueiro",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Martim_Pegueiro.jpg"
       },
       {
         "name": "Miguel Birsanu",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Miguel_Birsanu.jpg"
       },
       {
         "name": "Henrique Malva",
-        "role": "Technical",
+        "role": "Technical Team",
         "img": "/assets/team/Henrique_Malva.jpg"
       },
       {
