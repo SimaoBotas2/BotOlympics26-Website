@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_PORT: "8080"
+    environment:
+      - APP_PORT=8080
+    # do not publish the port to the host; expose it only to Docker networks
+    expose:
+      - "8080"
+    volumes:
+      - ./src/locales:/app/locales:rw
+      - ./config:/app/config:rw
+      # mount only the gallery images you want to edit live, under the exact built assets path
+      # create the folder ./assets/2025/gallery on the host and put images there
+      - ./assets/2025/gallery:/app/dist/assets/2025/gallery:rw
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:8080/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    external:
+      name: ${DOCKER_NETWORK}

@@ -1,0 +1,875 @@
+:root {
+  --bg: #1a1a1a;
+  --muted: #a0a0a0;
+  --accent: #1e90ff;
+  --accent-2: #00bfff;
+  --text: #ffffff;
+  --card: #262626;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', system-ui, Arial;
+}
+
+/* ensure viewport-based heights work reliably */
+html,
+body {
+  height: 100%;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* HEADER */
+.bo-header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: var(--card);
+  z-index: 50;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  height: 48px;
+}
+
+.brand-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* language button active states */
+.lang-btn.active {
+  color: #041018;
+  font-weight: 800;
+  border: 0;
+  box-shadow: 0 8px 18px rgba(3, 6, 12, 0.45);
+}
+
+/* english active (cyan) */
+.lang-btn.active[data-lang="en"] {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #041018;
+}
+
+/* portuguese active (accent-2 tint) */
+.lang-btn.active[data-lang="pt"] {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  color: #041018;
+}
+
+.btn-cta:focus,
+.btn-cta:visited,
+.btn-cta {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: var(--bg);
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-cta:hover {
+  color: var(--text);
+}
+
+/* TITLES & DESCRIPTIONS */
+.section h2 {
+  font-size: 40px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.section p {
+  color: var(--muted);
+  max-width: 900px;
+  margin: 0 auto 20px;
+  width: fit-content;
+}
+
+/* LANDING */
+.landing {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 180px
+}
+
+.landing-logo {
+  height: clamp(200px, 100vw, 480px);
+  width: auto;
+  display: block;
+}
+
+.landing-date {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.date-section h2 {
+  color: var(--accent);
+  font-size: 26px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ABOUT */
+/* nothing here */
+
+/* CHALLENGES */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.challenge-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: auto;
+  min-height: 0;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  width: 100%;
+}
+
+.challenge-box {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(20, 60, 140, 0.7), rgba(10, 30, 90, 0.8));
+  border-radius: 12px;
+  padding: 28px 30px;
+  box-shadow: 0 10px 30px rgba(3, 6, 12, 0.6);
+  color: var(--text);
+  text-align: left;
+  justify-content: space-between;
+}
+
+/* header row inside the box */
+.challenge-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.challenge-name {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.6px;
+}
+
+.challenge-logo {
+  height: 64px;
+  width: auto;
+  margin-left: 12px;
+}
+
+/* thin divider */
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.12));
+  margin: 14px 0;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+/* level and description */
+.challenge-level {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.challenge-desc {
+  color: var(--text);
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+/* pill buttons column */
+.challenge-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  /* occupy whole width of the parent (.challenge-box) */
+  min-width: 0;
+  /* allow width:100% to take effect */
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(3, 6, 12, 0.45);
+  border: 0;
+}
+
+/* primary filled pill (cyan) */
+.btn-pill-primary:focus,
+.btn-pill-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: var(--bg);
+}
+
+.btn-pill-primary:hover {
+  color: var(--text);
+}
+
+/* large primary pill (constrained width) */
+.btn-pill-primary-lg {
+  max-width: 370px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+}
+
+/* outline pill */
+.btn-pill-outline {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+/* disabled/closed look (if used) */
+.btn-pill[aria-disabled="true"] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* SCHEDULE */
+.schedule-section h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.schedule-section p {
+  color: var(--muted);
+}
+
+.schedule-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+}
+
+.schedule-image {
+  display: flex;
+}
+
+/* FAQ */
+.faq-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.faq-q {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-a {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+/* New FAQ layout: use flex so row height doesn't force neighbors to expand */
+.faq-grid-new {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  align-items: flex-start;
+  /* do not stretch items to same height */
+}
+
+/* each card takes ~50% width minus gap */
+.faq-card {
+  /* stronger visible box */
+  width: calc(50% - 7px);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.03);
+  /* slightly brighter, visible on dark bg */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* more pronounced border */
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  /* subtle base shadow */
+}
+
+/* hover/active affordance */
+.faq-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+}
+
+.faq-card.open {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* head row: ensure header has clear separation and always visible */
+.faq-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  /* separator under header */
+}
+
+/* keep question visually prominent */
+.faq-question {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/* body animation container (unchanged behavior) */
+.faq-card-body {
+  overflow: hidden;
+  transition: height 360ms cubic-bezier(.2, .9, .2, 1), opacity 220ms ease, transform 300ms cubic-bezier(.2, .9, .2, 1);
+  margin-top: 10px;
+}
+
+/* inner content */
+.faq-inner {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: var(--muted);
+  text-align: left;
+}
+
+/* responsive: one column on small screens */
+@media (max-width: 600px) {
+  .faq-grid-new {
+    gap: 12px;
+  }
+
+  .faq-card {
+    width: 100%;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+}
+
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* SPONSORS */
+.sponsor-tier {
+  margin-top: 18px;
+  padding-top: 12px;
+}
+
+.tier-name {
+  font-weight: 700;
+  color: var(--accent-2);
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.tier-logos {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tier-logos img {
+  max-height: 60px;
+  filter: grayscale(0.02);
+}
+
+.tier-underline {
+  height: 4px;
+  width: 100%;
+  margin: 8px 0 18px;
+  border-radius: 2px;
+  /* color is set inline from the React component via style={{ backgroundColor: tier.color }} */
+}
+
+/* TEAM */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.member-name {
+  font-weight: 700;
+  color: var(--text);
+  margin: 8px 0 4px;
+}
+
+.member-role {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  border: 4px solid rgba(255, 255, 255, 0.04);
+}
+
+/* MAP */
+.map-embed iframe {
+  border-radius: 8px;
+  border: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* FOOTER */
+.site-footer {
+  background: #070708;
+  border-top: 3px solid rgba(0, 220, 200, 0.12);
+  /* thin teal line */
+  color: var(--muted);
+  padding: 28px 0 18px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 360px 360px;
+  gap: 28px;
+  align-items: start;
+  width: 100%;
+}
+
+/* LEFT: search + socials (search aligned top-left) */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.footer-left h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 22px;
+}
+
+/* Social icons row under search (now only social row) */
+.social-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.social-btn {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 4px;
+}
+
+.social-btn img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1) grayscale(1) contrast(200%);
+  display: block;
+}
+
+/* CENTER: contacts list */
+.footer-center {
+  text-align: left;
+}
+
+.footer-center h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 22px;
+}
+
+.contact-item {
+  margin: 10px 0;
+}
+
+.contact-label {
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+/* RIGHT: organization logos */
+.footer-right {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-right h3 {
+  margin: 0 0 6px;
+  color: var(--text);
+  font-size: 22px;
+}
+
+.org-logos {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.org-logo {
+  height: 86px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.2);
+}
+
+/* small credit row */
+.footer-credit {
+  margin-top: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* responsive: stack columns on small screens */
+@media (max-width: 980px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    align-items: center;
+  }
+
+  .site-search {
+    width: 220px;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
+
+  .org-logos {
+    justify-content: center;
+  }
+}
+
+/* Make default link color use the theme accent instead of browser blue */
+a,
+a:visited {
+  color: var(--accent);
+  text-decoration: underline;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-2);
+  text-decoration: underline;
+  outline: none;
+}
+
+/* subtle 2px lift on hover/focus for all primary button-like elements */
+.btn-cta,
+.btn-pill,
+.lang-btn,
+.link-box,
+.btn-ghost,
+.btn-pill-primary,
+.btn-pill-outline {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  will-change: transform;
+}
+
+.btn-cta:hover,
+.btn-cta:focus,
+.btn-pill:hover,
+.btn-pill:focus,
+.lang-btn:hover,
+.lang-btn:focus,
+.link-box:hover,
+.link-box:focus,
+.btn-ghost:hover,
+.btn-ghost:focus,
+.btn-pill-primary:hover,
+.btn-pill-primary:focus,
+.btn-pill-outline:hover,
+.btn-pill-outline:focus {
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .challenge-box {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .challenge-name {
+    font-size: 20px;
+  }
+
+  .btn-pill {
+    min-width: 160px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing {
+    height: 80vh;
+  }
+
+  .challenges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wrap {
+    padding: 16px;
+  }
+}
+
+/* previous edition infinite carousel */
+.prev-carousel {
+  /* prevent the very wide animated track from increasing page width */
+  overflow-x: hidden;
+  /* clip horizontally */
+  overflow-y: visible;
+  /* still allow vertical overlap */
+  width: 100%;
+  padding: 100px 0 32px;
+  min-height: 450px;
+  position: relative;
+  contain: layout;
+  /* help prevent layout from spilling out */
+}
+
+
+.carousel-track {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  width: max-content;
+  animation-name: carouselScroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+/* make each item use CSS vars for size & offset so we can vary them via nth-child */
+.carousel-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: visible;
+  /* allow lifts */
+  background: rgba(0, 0, 0, 0.04);
+  padding: 6px;
+  position: relative;
+  /* smooth interaction */
+  transition: transform 360ms cubic-bezier(.18, .9, .32, 1), box-shadow 260ms ease;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* images become more prominent and sharper with bigger radius */
+.carousel-item img {
+  height: auto;
+  /* set via inline style from JS */
+  width: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 280ms ease, filter 260ms ease;
+}
+
+/* hover / focus affordance — lift and slightly scale the image */
+.carousel-item:hover,
+.carousel-item:focus-within {
+  transform: translateY(-18px) scale(1.02);
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.7);
+  z-index: 99;
+}
+
+.carousel-item:hover img,
+.carousel-item:focus-within img {
+  transform: scale(1.06);
+  filter: saturate(1.06) contrast(1.03);
+}
+
+/* move the track left by 50% (since content duplicated) for seamless loop */
+@keyframes carouselScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* responsive: smaller images on mobile and reduced offsets */
+@media (max-width: 1000px) {
+  .prev-carousel {
+    min-height: 380px;
+    padding: 100px 0 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .prev-carousel {
+    min-height: 360px;
+    padding: 80px 0 120px;
+  }
+
+  .carousel-item img {
+    transform-origin: center center;
+  }
+}
+
+/* add a small separation so the title isn't visually crowded by the carousel */
+#previous>h2 {
+  margin-top: 8px;
+}

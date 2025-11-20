@@ -1,0 +1,394 @@
+{
+  "header": {
+    "logo": "/assets/logo.svg",
+    "registerText": "Register Now!"
+  },
+  "landing": {
+    "background": "/assets/2025/landing.jpg",
+    "foregroundLogo": "/assets/logo.png"
+  },
+  "date": {
+    "text": "More information coming soon!"
+  },
+  "about": {
+    "title": "About us",
+    "text1": "BotOlympics is the University of Coimbra’s robotics competition, organized by Núcleo de Estudantes de Engenharia Eletrotécnica e de Computadores (NEEEC/AAC) and Clube de Robótica da Universidade de Coimbra (CR). It is an educational and formative event that aims to introduce the world of robotics to young aspiring engineers.",
+    "text2": "Consisting of three simultaneous tournaments for students from primary school to university level, the competition takes place in a hackathon environment over the course of four days, where participants have to develop ways of achieving the objectives of each of their respective challenges.",
+    "text3": "Given the wide age range of the participants, BotOlympics is considered one of a kind contest in Portugal."
+  },
+  "challenges": {
+    "title": "Challenges",
+    "text": "Discover more about the different tournaments and register!",
+    "generalRegulationLabel": "General Regulation",
+    "generalRegulationUrl": "/assets/2026/challenges/general-regulations.pdf",
+    "registerOpenLabel": "Register",
+    "registerBeforeLabel": "Registrations open soon",
+    "registerAfterLabel": "Registrations full",
+    "regulationLabel": "Regulations",
+    "items": [
+      {
+        "id": "isr",
+        "name": "ISR CHALLENGE",
+        "logo": "/assets/2026/challenges/ISR/logo.png",
+        "subtitle": "Primary education",
+        "description": "Using a simple and intuitive robotics kit – the MBot2 – programmed in a block language, similar to “Scratch”, participants must navigate a track using various sensors, avoiding any obstacles that may appear!",
+        "formUrl": "https://forms.gle/isr-registration",
+        "rulesUrl": "/assets/2026/challenges/ISR/isr-rules.pdf",
+        "bg": "/assets/2026/challenges/ISR/bg.jpg"
+      },
+      {
+        "id": "botnroll",
+        "name": "BOT N' ROLL CHALLENGE",
+        "logo": "/assets/2026/challenges/BOTNROLL/logo.png",
+        "subtitle": "Secondary education",
+        "description": "Using a robot – the Bot’N Roll ONE A – programmed in C++ for Arduino, participants must collect and deliver packages inside a simulated environment, relying on various sensors to navigate.",
+        "formUrl": "https://forms.gle/botnroll-registration",
+        "rulesUrl": "/assets/2026/challenges/BOTNROLL/botnroll-rules.pdf",
+        "bg": "/assets/2026/challenges/BOTNROLL/bg.jpg"
+      },
+      {
+        "id": "fctuc",
+        "name": "FCTUC CHALLENGE",
+        "logo": "/assets/2026/challenges/FCTUC/logo.png",
+        "subtitle": "Higher education",
+        "description": "Using a robot developed by specially by us, programmed in C++ for Arduino, participants must chase after another robot, a thief on the run, using the available sensors to navigate through a labyrinth.",
+        "formUrl": "https://forms.gle/fctuc-registration",
+        "rulesUrl": "/assets/2026/challenges/FCTUC/fctuc-rules.pdf",
+        "bg": "/assets/2026/challenges/FCTUC/bg.jpg"
+      }
+    ]
+  },
+  "schedule": {
+    "title": "Schedule",
+    "description": "This is the schedule for the greatest spectacle of the year!",
+    "missing": "Schedule will be available soon!",
+    "image": "/assets/2026/schedule.png"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "So you don’t have any doubts about the competition.",
+    "items": [
+      {
+        "q": "How do I register?",
+        "a": "Registration is limited to the number of spots available and can be done here. Please note that when registering you will need to have all your team’s details collected, including a passport photo of each member, a declaration of permission from your guardian (if applicable) and proof of payment at the event."
+      },
+      {
+        "q": "Is it compulsory to take part in all moments of the challenge?",
+        "a": "Our aim is to provide a learning environment, team spirit and encourage students’ problem-solving skills. To this end, teams must take part in all stages of the event and must be accompanied by their tutor (if applicable) at all times."
+      },
+      {
+        "q": "How much does it cost to register?",
+        "a": "Participation in this event costs €17.50 per participant and covers all meals and material needed for the competition. Participants also receive a goodie bag, an event T-shirt, a cultural visit and access to all the activities on the event programme. Participation of tutors is free of charge."
+      },
+      {
+        "q": "What meals are provided by the organisation?",
+        "a": "All meals are provided by the organisation (breakfast, lunch and dinner). There will also be regular coffee breaks throughout the day. Coffee is also provided by the organisation throughout the event, except at the final venue."
+      },
+      {
+        "q": "I would like a receipt, how do I proceed?",
+        "a": "The registration receipt will be issued to all members, so you will be asked for your tax number (NIF) when you register and it will be sent to your e-mail address as soon as it has been issued. The receipt is issued by the financial services of the Academic Association of Coimbra and not by the BotOlympics Organising Committee, so this process may take some time."
+      },
+      {
+        "q": "What kind of certificate are we entitled to?",
+        "a": "All event participants, mentors and volunteers will receive a certificate of participation in the event, issued by the BotOlympics Organising Committee and certified by the Director of the Department of Electrical and Computer Engineering at FCTUC. UC students will also receive a diploma supplement issued by the Academic Management Services of the University of Coimbra, as well as justification for absences should you have to miss any classes."
+      },
+      {
+        "q": "I don’t have a team, now what?",
+        "a": "All teams must have 4 members. Only in the case of higher education competitions (FCTUC) is it possible to register individually. In this case, registration will be confirmed when 3 more participants are in the same position and can thus form a team."
+      },
+      {
+        "q": "How does the competition work according to the schedule?",
+        "a": "The schedules will be strict for essential meals (breakfast, lunch and dinner), the first day’s training sessions and the final competition. Aside from this, participants are free to work (or sleep) whenever they please."
+      },
+      {
+        "q": "Is there transport during the event?",
+        "a": "Transport during the event is provided by the organisation, both for the cultural visit and for the Grand Finale’s venue."
+      },
+      {
+        "q": "Where are we staying?",
+        "a": "Both the participants and the accompanying tutors will stay at the Department of Electrical and Computer Engineering (DEEC). Teams may choose to stay elsewhere, but all the logistics and costs will be assumed by them or the school (if applicable)."
+      },
+      {
+        "q": "I want to volunteer, what benefits do I get and how can I sign up?",
+        "a": "Volunteers are entitled to the same benefits as participants (food, changing rooms, transport, overnight accommodation and a certificate). Registration is also available on the BotOlympics website during the period publicised on social media."
+      },
+      {
+        "q": "In the case of primary and high school tournaments, is it possible to register more than one team per school?",
+        "a": "Yes, there can be more than one team per school. However, each event supports a limited number of teams. Teams are approved once the registration fee has been paid and if there is more than one team, we prioritize the registration of the first team from each school, while the others will be placed on a waiting list."
+      },
+      {
+        "q": "I would like to buy a robot after the event, what should I do?",
+        "a": "If you want to buy one of the robot models for the ISR or Bot’N Roll competitions, you can do so for less than the usual retail price. The purchase is made to order so you should show interest at the time of registration."
+      },
+      {
+        "q": "What material should I bring to the competition?",
+        "a": "You should bring personal hygiene equipment (slippers, towels, etc.), a sleeping bag, a mattress or equivalent, clothes for the duration of the event, among other items that you consider necessary for the purpose. For the actual tournament, you should bring your own computer (at least one per team)."
+      },
+      {
+        "q": "I have overlapping classes with the event, now what?",
+        "a": "Attendance at the event, in particular the opening session and workshops, is compulsory. If you have classes at the same time, you will be entitled to a certificate of attendance to excuse any absences."
+      }
+    ]
+  },
+  "previousEdition": {
+    "title": "Previous Edition",
+    "description": "In few words, BotOlympics’25…",
+    "galleryPath": "/assets/2025/gallery"
+  },
+  "sponsors": {
+    "title": "Sponsors",
+    "description": "BotOlympics needs your support! Contact us at patrocinios@botolympics.pt to learn more about sponsorship opportunities and benefits.",
+    "tiers": [
+      {
+        "name": "Institutional",
+        "color": "#ff003d",
+        "sponsors": []
+      },
+      {
+        "name": "Diamond",
+        "color": "#00cbff",
+        "sponsors": []
+      },
+      {
+        "name": "Gold",
+        "color": "#edd200",
+        "sponsors": []
+      },
+      {
+        "name": "Silver",
+        "color": "#ececec",
+        "sponsors": []
+      }
+    ],
+    "contactNote": "Interested in sponsoring our event? Contact us via patrocinios@botolympics.pt."
+  },
+  "team": {
+    "title": "Our Team",
+    "members": [
+      {
+        "name": "Tiago Furtado",
+        "role": "General Coordinator (NEEEC/AAC)",
+        "img": "/assets/team/Tiago_Furtado.jpg"
+      },
+      {
+        "name": "Simão Botas",
+        "role": "General Coordinator (CRUC)",
+        "img": "/assets/team/Simao_Botas.jpg"
+      },
+      {
+        "name": "André Marques",
+        "role": "Deputy General Coordinator",
+        "img": "/assets/team/Andre_Marques.jpg"
+      },
+      {
+        "name": "André Lourenço",
+        "role": "Secretary",
+        "img": "/assets/team/Andre_Lourenco.jpg"
+      },
+      {
+        "name": "Beatriz Bento",
+        "role": "Supervisor (NEEEC/AAC)",
+        "img": "/assets/team/Beatriz_Bento.jpg"
+      },
+      {
+        "name": "Francisco Cunha",
+        "role": "Representative (NEEEC/AAC)",
+        "img": "/assets/team/Francisco_Cunha.jpg"
+      },
+      {
+        "name": "Samuel Tomé",
+        "role": "Representative (NEEEC/AAC)",
+        "img": "/assets/team/Samuel_Tome.jpg"
+      },
+      {
+        "name": "Inês Miguel",
+        "role": "Representative (NEEEC/AAC)",
+        "img": "/assets/team/Ines_Miguel.jpg"
+      },
+      {
+        "name": "Diogo Vasco",
+        "role": "Technical",
+        "img": "/assets/team/Diogo_Vasco.jpg"
+      },
+      {
+        "name": "David Oliveira",
+        "role": "Technical",
+        "img": "/assets/team/David_Oliveira.jpg"
+      },
+      {
+        "name": "Gabriel Pinto",
+        "role": "Technical",
+        "img": "/assets/team/Gabriel_Pinto.jpg"
+      },
+      {
+        "name": "Rodrigo Gonçalves",
+        "role": "Technical",
+        "img": "/assets/team/Rodrigo_Goncalves.jpg"
+      },
+      {
+        "name": "Simão Rodrigues",
+        "role": "Technical",
+        "img": "/assets/team/Simao_Rodrigues.jpg"
+      },
+      {
+        "name": "Bruno Silva",
+        "role": "Technical",
+        "img": "/assets/team/Bruno_Silva.jpg"
+      },
+      {
+        "name": "Martim Pegueiro",
+        "role": "Technical",
+        "img": "/assets/team/Martim_Pegueiro.jpg"
+      },
+      {
+        "name": "Miguel Birsanu",
+        "role": "Technical",
+        "img": "/assets/team/Miguel_Birsanu.jpg"
+      },
+      {
+        "name": "Henrique Malva",
+        "role": "Technical",
+        "img": "/assets/team/Henrique_Malva.jpg"
+      },
+      {
+        "name": "Francisco Silva",
+        "role": "IT",
+        "img": "/assets/team/Francisco_Silva.jpg"
+      },
+      {
+        "name": "João Marinheiro",
+        "role": "School Contacts",
+        "img": "/assets/team/Joao_Marinheiro.jpg"
+      },
+      {
+        "name": "Ricardo Sardinha",
+        "role": "School Contacts",
+        "img": "/assets/team/Ricardo_Sardinha.jpg"
+      },
+      {
+        "name": "João Gonçalves",
+        "role": "School Contacts",
+        "img": "/assets/team/Joao_Goncalves.jpg"
+      },
+      {
+        "name": "Miguel Gonçalves",
+        "role": "Logistics",
+        "img": "/assets/team/Miguel_Goncalves.jpg"
+      },
+      {
+        "name": "Gonçalo Gonçalves",
+        "role": "Logistics",
+        "img": "/assets/team/Goncalo_Goncalves.jpg"
+      },
+      {
+        "name": "Rodrigo Carvalho",
+        "role": "Treasury",
+        "img": "/assets/team/Rodrigo_Carvalho.jpg"
+      },
+      {
+        "name": "Rodrigo Ramos",
+        "role": "Treasury",
+        "img": "/assets/team/Rodrigo_Ramos.jpg"
+      },
+      {
+        "name": "Beatriz Lucas",
+        "role": "Sponsorships & Support",
+        "img": "/assets/team/Beatriz_Lucas.jpg"
+      },
+      {
+        "name": "Daniel Faia",
+        "role": "Sponsorships & Support",
+        "img": "/assets/team/Daniel_Faia.jpg"
+      },
+      {
+        "name": "Filipe Rodrigues",
+        "role": "Sponsorships & Support",
+        "img": "/assets/team/Filipe_Rodrigues.jpg"
+      },
+      {
+        "name": "Isabela Panelli",
+        "role": "Sponsorships & Support",
+        "img": "/assets/team/Isabela_Panelli.jpg"
+      },
+      {
+        "name": "Teodoro Marques",
+        "role": "Sponsorships & Support",
+        "img": "/assets/team/Teodoro_Marques.jpg"
+      },
+      {
+        "name": "Bernardo Grazina",
+        "role": "Sponsorships & Support",
+        "img": "/assets/team/Bernardo_Grazina.jpg"
+      },
+      {
+        "name": "Matilde Pereira",
+        "role": "Communication & Image",
+        "img": "/assets/team/Matilde_Pereira.jpg"
+      },
+      {
+        "name": "Carolina Reis",
+        "role": "Communication & Image",
+        "img": "/assets/team/Carolina_Reis.jpg"
+      }
+    ]
+  },
+  "location": {
+    "title": "Location",
+    "description": "DEEC, Polo II, University of Coimbra",
+    "mapEmbedUrl": "https://www.google.com/maps?q=DEEC+Polo+II+Coimbra&output=embed"
+  },
+  "footer": {
+    "socialsLabel": "Social Media",
+    "contactsLabel": "Contacts",
+    "organizationLabel": "Organization",
+    "socials": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/botolympics",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1384/1384053.png"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/botolympics",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+      },
+      {
+        "name": "TikTok",
+        "url": "https://www.tiktok.com/@botolympics",
+        "icon": "https://cdn-icons-png.flaticon.com/512/3046/3046126.png"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/company/botolympics",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/@botolympics",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+      }
+    ],
+    "contacts": [
+      {
+        "label": "General",
+        "email": "geral@botolympics.pt"
+      },
+      {
+        "label": "Sponsors",
+        "email": "patrocinios@botolympics.pt"
+      }
+    ],
+    "organizations": [
+      {
+        "name": "Clube de Robótica",
+        "url": "https://clrobotica.deec.uc.pt",
+        "logo": "/assets/organization/CLROBOTICA.png"
+      },
+      {
+        "name": "NEEEC",
+        "url": "https://neeec.pt",
+        "logo": "/assets/organization/NEEEC.png"
+      }
+    ]
+  }
+}
