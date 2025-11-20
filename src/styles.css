@@ -269,6 +269,7 @@ body {
   color: var(--bg);
 }
 
+.btn-pill-primary:visited,
 .btn-pill-primary:hover {
   color: var(--text);
 }
