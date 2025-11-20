@@ -326,9 +326,14 @@
         "img": "/assets/team/Matilde_Pereira.jpg"
       },
       {
-        "name": "Carolina Reis",
+        "name": "Afonso Gonçalves",
         "role": "Comunicação e Imagem",
-        "img": "/assets/team/Carolina_Reis.jpg"
+        "img": "/assets/team/Afonso_Goncalves.jpg"
+      },
+      {
+        "name": "Mafalda Pinho",
+        "role": "Programas Paralelos",
+        "img" : "/assets/team/Mafalda_Pinho.jpg"
       }
     ]
   },
