@@ -216,48 +216,48 @@
         "img": "/assets/team/Rodrigo_Carvalho.jpg"
       },
       {
+        "name": "Bruno Silva",
+        "role": "Equipa Técnica - ISR",
+        "img": "/assets/team/Bruno_Silva.jpg"
+      },
+      {
         "name": "Diogo Vasco",
-        "role": "Equipa Técnica",
+        "role": "Equipa Técnica - ISR",
         "img": "/assets/team/Diogo_Vasco.jpg"
       },
       {
         "name": "David Oliveira",
-        "role": "Equipa Técnica",
+        "role": "Equipa Técnica - BOTN'ROLL",
         "img": "/assets/team/David_Oliveira.jpg"
       },
       {
         "name": "Gabriel Pinto",
-        "role": "Equipa Técnica",
+        "role": "Equipa Técnica - BOTN'ROLL",
         "img": "/assets/team/Gabriel_Pinto.jpg"
       },
       {
-        "name": "Rodrigo Gonçalves",
-        "role": "Equipa Técnica",
-        "img": "/assets/team/Rodrigo_Goncalves.jpg"
-      },
-      {
-        "name": "Simão Rodrigues",
-        "role": "Equipa Técnica",
-        "img": "/assets/team/Simao_Rodrigues.jpg"
-      },
-      {
-        "name": "Bruno Silva",
-        "role": "Equipa Técnica",
-        "img": "/assets/team/Bruno_Silva.jpg"
-      },
-      {
-        "name": "Martim Pegueiro",
-        "role": "Equipa Técnica",
-        "img": "/assets/team/Martim_Pegueiro.jpg"
-      },
-      {
         "name": "Miguel Birsanu",
-        "role": "Equipa Técnica",
+        "role": "Equipa Técnica - BOTN'ROLL",
         "img": "/assets/team/Miguel_Birsanu.jpg"
       },
       {
+        "name": "Simão Rodrigues",
+        "role": "Equipa Técnica - BOTN'ROLL",
+        "img": "/assets/team/Simao_Rodrigues.jpg"
+      },
+      {
+        "name": "Rodrigo Gonçalves",
+        "role": "Equipa Técnica - FCTUC",
+        "img": "/assets/team/Rodrigo_Goncalves.jpg"
+      },
+      {
+        "name": "Martim Pegueiro",
+        "role": "Equipa Técnica - FCTUC",
+        "img": "/assets/team/Martim_Pegueiro.jpg"
+      },
+      {
         "name": "Henrique Malva",
-        "role": "Equipa Técnica",
+        "role": "Equipa Técnica - FCTUC",
         "img": "/assets/team/Henrique_Malva.jpg"
       },
       {

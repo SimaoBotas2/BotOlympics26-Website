@@ -216,49 +216,49 @@
         "img": "/assets/team/Rodrigo_Carvalho.jpg"
       },
       {
+        "name": "Bruno Silva",
+        "role": "Technical Team - ISR",
+        "img": "/assets/team/Bruno_Silva.jpg"
+      },
+      {
         "name": "Diogo Vasco",
-        "role": "Technical Team",
+        "role": "Technical Team - ISR",
         "img": "/assets/team/Diogo_Vasco.jpg"
       },
       {
         "name": "David Oliveira",
-        "role": "Technical Team",
+        "role": "Technical Team - BOTN'ROLL",
         "img": "/assets/team/David_Oliveira.jpg"
       },
       {
         "name": "Gabriel Pinto",
-        "role": "Technical Team",
+        "role": "Technical Team - BOTN'ROLL",
         "img": "/assets/team/Gabriel_Pinto.jpg"
       },
       {
-        "name": "Rodrigo Gonçalves",
-        "role": "Technical Team",
-        "img": "/assets/team/Rodrigo_Goncalves.jpg"
-      },
-      {
-        "name": "Simão Rodrigues",
-        "role": "Technical Team",
-        "img": "/assets/team/Simao_Rodrigues.jpg"
-      },
-      {
-        "name": "Bruno Silva",
-        "role": "Technical Team",
-        "img": "/assets/team/Bruno_Silva.jpg"
-      },
-      {
-        "name": "Martim Pegueiro",
-        "role": "Technical Team",
-        "img": "/assets/team/Martim_Pegueiro.jpg"
-      },
-      {
         "name": "Miguel Birsanu",
-        "role": "Technical Team",
+        "role": "Technical Team - BOTN'ROLL",
         "img": "/assets/team/Miguel_Birsanu.jpg"
       },
       {
+        "name": "Simão Rodrigues",
+        "role": "Technical Team - BOTN'ROLL",
+        "img": "/assets/team/Simao_Rodrigues.jpg"
+      },
+      {
         "name": "Henrique Malva",
-        "role": "Technical Team",
+        "role": "Technical Team - FCTUC",
         "img": "/assets/team/Henrique_Malva.jpg"
+      },
+      {
+        "name": "Martim Pegueiro",
+        "role": "Technical Team - FCTUC",
+        "img": "/assets/team/Martim_Pegueiro.jpg"
+      },
+            {
+        "name": "Rodrigo Gonçalves",
+        "role": "Technical Team - FCTUC",
+        "img": "/assets/team/Rodrigo_Goncalves.jpg"
       },
       {
         "name": "Francisco Silva",
