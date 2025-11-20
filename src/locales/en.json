@@ -206,6 +206,16 @@
         "img": "/assets/team/Ines_Miguel.jpg"
       },
       {
+        "name": "Rodrigo Ramos",
+        "role": "Treasury",
+        "img": "/assets/team/Rodrigo_Ramos.jpg"
+      },
+      {
+        "name": "Rodrigo Carvalho",
+        "role": "Treasury",
+        "img": "/assets/team/Rodrigo_Carvalho.jpg"
+      },
+      {
         "name": "Diogo Vasco",
         "role": "Technical Team",
         "img": "/assets/team/Diogo_Vasco.jpg"
@@ -279,16 +289,6 @@
         "name": "Gonçalo Gonçalves",
         "role": "Logistics",
         "img": "/assets/team/Goncalo_Goncalves.jpg"
-      },
-      {
-        "name": "Rodrigo Carvalho",
-        "role": "Treasury",
-        "img": "/assets/team/Rodrigo_Carvalho.jpg"
-      },
-      {
-        "name": "Rodrigo Ramos",
-        "role": "Treasury",
-        "img": "/assets/team/Rodrigo_Ramos.jpg"
       },
       {
         "name": "Beatriz Lucas",
