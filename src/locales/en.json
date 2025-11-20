@@ -78,7 +78,7 @@
       },
       {
         "q": "How much does it cost to register?",
-        "a": "Participation in this event costs €17.50 per participant and covers all meals and material needed for the competition. Participants also receive a goodie bag, an event T-shirt, a cultural visit and access to all the activities on the event programme. Participation of tutors is free of charge."
+        "a": "Participation in this event costs €18 per participant and covers all meals and material needed for the competition. Participants also receive a goodie bag, an event T-shirt, a cultural visit and access to all the activities on the event programme. Participation of tutors is free of charge."
       },
       {
         "q": "What meals are provided by the organisation?",
@@ -246,19 +246,19 @@
         "img": "/assets/team/Simao_Rodrigues.jpg"
       },
       {
-        "name": "Henrique Malva",
+        "name": "Rodrigo Gonçalves",
         "role": "Technical Team - FCTUC",
-        "img": "/assets/team/Henrique_Malva.jpg"
+        "img": "/assets/team/Rodrigo_Goncalves.jpg"
       },
       {
         "name": "Martim Pegueiro",
         "role": "Technical Team - FCTUC",
         "img": "/assets/team/Martim_Pegueiro.jpg"
       },
-            {
-        "name": "Rodrigo Gonçalves",
+      {
+        "name": "Henrique Malva",
         "role": "Technical Team - FCTUC",
-        "img": "/assets/team/Rodrigo_Goncalves.jpg"
+        "img": "/assets/team/Henrique_Malva.jpg"
       },
       {
         "name": "Francisco Silva",
@@ -335,7 +335,6 @@
         "role": "Parallel Programs",
         "img": "/assets/team/Mafalda_Pinho.jpg"
       }
-
     ]
   },
   "location": {
