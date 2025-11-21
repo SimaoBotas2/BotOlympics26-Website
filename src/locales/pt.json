@@ -133,7 +133,7 @@
   "previousEdition": {
     "title": "A Edição Anterior",
     "description": "Em poucas palavras, BotOlympics’25…",
-    "galleryPath": "/assets/2025/gallery"
+    "galleryPath": "assets/2025/gallery"
   },
   "sponsors": {
     "title": "Patrocínios",
