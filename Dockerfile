@@ -24,6 +24,10 @@ COPY --from=builder /app/server.js /app/server.js
 
 # copy default runtime config (overridden by docker-compose volume if mounted)
 COPY --from=builder /app/config /app/config
+# also copy config into the built `dist` so the runtime server can read preloaded registrations
+COPY --from=builder /app/config /app/dist/config
+# copy source locales into dist so server can inspect locale JSON at runtime (requires rebuild to change)
+COPY --from=builder /app/src/locales /app/dist/locales
 COPY --from=builder /app/assets /app/dist/assets
 
 EXPOSE ${APP_PORT}
