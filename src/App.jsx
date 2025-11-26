@@ -25,6 +25,16 @@ export default function App() {
   // new: registrations config fetched at runtime (fixed endpoint + periodic refresh)
   const [registrations, setRegistrations] = useState({});
   useEffect(() => {
+    // if server injected preloaded registrations, use them and skip polling/fetch
+    try {
+      const pre = (typeof window !== 'undefined' && window.__PRELOADED__) ? window.__PRELOADED__.registrations : null;
+      if (pre && typeof pre === 'object') {
+        setRegistrations(pre);
+        return () => { };
+      }
+    } catch (e) { /* ignore access errors */ }
+
+    // fallback: single fetch at runtime (no polling) so client still works in environments without server injection
     let mounted = true;
     const fetchCfg = () => {
       fetch('/_config/registrations.json').then(r => {
@@ -35,8 +45,7 @@ export default function App() {
       }).catch(() => { });
     };
     fetchCfg();
-    const intervalId = setInterval(fetchCfg, 5000); // poll every 5s so edits apply while running
-    return () => { mounted = false; clearInterval(intervalId); };
+    return () => { mounted = false; };
   }, []);
 
   // ensure PT is the default on first visit (do not override an existing preference)
@@ -168,11 +177,25 @@ export default function App() {
   useEffect(() => {
     if (galleryFetchedRef.current) return; // already done
     galleryFetchedRef.current = true;
-    let mounted = true;
 
     const dir = (typeof previous.images === 'string' && previous.images.trim())
       ? previous.images.trim()
       : (previous.galleryPath && typeof previous.galleryPath === 'string' ? previous.galleryPath : null);
+
+    // if server injected preloaded galleries, use them
+    try {
+      const pre = (typeof window !== 'undefined' && window.__PRELOADED__) ? window.__PRELOADED__.galleries : null;
+      if (pre) {
+        // try exact dir, then try without leading slash
+        const maybe = dir && (pre[dir] || pre[String(dir).replace(/^\/+/, '')] || pre[dir.replace(/^\/+/, '')]);
+        if (Array.isArray(maybe) && maybe.length) {
+          setPreviousGallery(maybe);
+          return () => {};
+        }
+      }
+    } catch (e) { /* ignore */ }
+
+    let mounted = true;
 
     const fetchGallery = async () => {
       if (!dir || !mounted) return;

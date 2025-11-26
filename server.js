@@ -191,7 +191,74 @@ function serveIndex(res) {
       });
       return;
     }
-    sendFile(res, indexPath);
+    // read index.html and inject preloaded data (registrations + gallery listings)
+    fs.readFile(indexPath, 'utf8', (rerr, html) => {
+      if (rerr) {
+        console.error('[serveIndex] read index.html failed', rerr && rerr.code);
+        return sendFile(res, indexPath);
+      }
+
+      // prepare preload object
+      const preload = { registrations: null, galleries: {} };
+
+      // read registrations config if available
+      try {
+        if (fs.existsSync(CONFIG_FILE)) {
+          const raw = fs.readFileSync(CONFIG_FILE, 'utf8');
+          preload.registrations = JSON.parse(raw);
+        }
+      } catch (e) {
+        console.warn('[serveIndex] failed to read/parse registrations', e && e.message);
+        preload.registrations = null;
+      }
+
+      // inspect locale files to discover gallery dirs or explicit image lists
+      try {
+        if (fs.existsSync(LOCALES)) {
+          const locFiles = fs.readdirSync(LOCALES).filter(f => f.endsWith('.json'));
+          locFiles.forEach((lf) => {
+            try {
+              const full = path.join(LOCALES, lf);
+              const content = fs.readFileSync(full, 'utf8');
+              const json = JSON.parse(content);
+              const prev = json && json.previousEdition;
+              if (!prev) return;
+              // if images is an array, use as-is
+              if (Array.isArray(prev.images) && prev.images.length) {
+                preload.galleries[lf] = prev.images;
+                return;
+              }
+              // allow either previous.images (string dir) or previous.galleryPath
+              const dir = (typeof prev.images === 'string' && prev.images.trim())
+                ? prev.images.trim()
+                : (typeof prev.galleryPath === 'string' && prev.galleryPath.trim() ? prev.galleryPath.trim() : null);
+              if (!dir) return;
+              const rel = String(dir).replace(/^\/+/, '');
+              const abs = path.join(ROOT, rel);
+              if (!abs.startsWith(ROOT)) return;
+              if (!fs.existsSync(abs)) return;
+              const files = fs.readdirSync(abs).filter(f => {
+                const ext = path.extname(f).toLowerCase();
+                return ['.png', '.jpg', '.jpeg', '.webp', '.gif', '.svg', '.bmp'].includes(ext);
+              }).sort();
+              const urls = files.map(f => '/' + path.posix.join(rel, f).replace(/\\/g, '/'));
+              preload.galleries[dir] = urls;
+            } catch (e) {
+              /* ignore malformed locale files */
+            }
+          });
+        }
+      } catch (e) {
+        /* ignore locale read errors */
+      }
+
+      // inject as a small inline script before closing </body>
+      const script = `<script>window.__PRELOADED__ = ${JSON.stringify(preload)};</script>`;
+      const out = html.replace(/<\/body>/i, script + '\n</body>');
+      // send modified HTML with no-store cache header
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
+      res.end(out);
+    });
   });
 }
 
