@@ -12,12 +12,13 @@ services:
     # do not publish the port to the host; expose it only to Docker networks
     expose:
       - "8080"
-    volumes:
-      - ./src/locales:/app/locales:rw
-      - ./config:/app/config:rw
-      # mount only the gallery images you want to edit live, under the exact built assets path
-      # create the folder ./assets/2025/gallery on the host and put images there
-      - ./assets/2025/gallery:/app/dist/assets/2025/gallery:rw
+    # No runtime mounts for locales/config/gallery to enforce rebuild/redeploy when
+    # making changes to translations, registrations, or built assets. Uncomment
+    # and adjust the following `volumes` block only for local development.
+    # volumes:
+    #   - ./src/locales:/app/locales:rw
+    #   - ./config:/app/config:rw
+    #   - ./assets/2025/gallery:/app/dist/assets/2025/gallery:rw
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:8080/"]

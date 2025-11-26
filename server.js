@@ -6,8 +6,9 @@ const url = require('url');
 const PORT = process.env.APP_PORT ? Number(process.env.APP_PORT) : 3000;
 const HOST = '0.0.0.0';
 const ROOT = path.join(__dirname, 'dist');
-const LOCALES = path.join(__dirname, 'locales');
-const CONFIG_DIR = path.join(__dirname, 'config');
+// serve static/localized JSON from the built `dist` so changes require rebuild/redeploy
+const LOCALES = path.join(ROOT, 'locales');
+const CONFIG_DIR = path.join(ROOT, 'config');
 const CONFIG_FILE = path.join(CONFIG_DIR, 'registrations.json');
 
 const MIME = {
@@ -67,7 +68,7 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    // Serve locale JSON files from LOCALES dir if requested (live-editable)
+    // Serve locale JSON files from the built `dist/locales` (static)
     if (safe.startsWith('locales/')) {
       const rel = safe.replace(/^locales\//, '');
       const filePath = path.join(LOCALES, rel);
@@ -75,44 +76,24 @@ const server = http.createServer((req, res) => {
       if (!filePath.startsWith(LOCALES)) { res.writeHead(400); return res.end('Bad Request'); }
       fs.stat(filePath, (err, stats) => {
         if (!err && stats.isFile()) return sendFile(res, filePath);
-        console.warn('[locales] not found', filePath, err && err.code);
+        console.warn('[locales] not found in dist/locales', filePath, err && err.code);
         res.writeHead(404); return res.end('Not found');
       });
       return;
     }
 
-    // Serve config file (readable by the client)
+    // Serve config file from built `dist/config/registrations.json` (static)
     if (safe === '_config/registrations.json') {
       fs.stat(CONFIG_FILE, (err, stats) => {
         if (!err && stats.isFile()) return sendFile(res, CONFIG_FILE);
-        console.warn('[config] registrations.json not found', err && err.code);
+        console.warn('[config] registrations.json not found in dist/config', err && err.code);
         res.writeHead(404); return res.end('Not found');
       });
       return;
     }
 
-    // Admin endpoint to update registrations (POST JSON)
-    if (safe === '_admin/registrations' && req.method === 'POST') {
-      let body = '';
-      req.on('data', chunk => { body += chunk.toString(); });
-      req.on('end', () => {
-        try {
-          const payload = JSON.parse(body);
-          if (typeof payload !== 'object' || Array.isArray(payload) || payload === null) {
-            res.writeHead(400); return res.end('Bad payload');
-          }
-          fs.writeFile(CONFIG_FILE, JSON.stringify(payload, null, 2), (err) => {
-            if (err) { console.error('[admin] write failed', err); res.writeHead(500); return res.end('Failed to write config'); }
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            return res.end(JSON.stringify({ ok: true }));
-          });
-        } catch (e) {
-          console.warn('[admin] invalid JSON', e && e.message);
-          res.writeHead(400); return res.end('Invalid JSON');
-        }
-      });
-      return;
-    }
+    // NOTE: runtime admin POST endpoints removed to enforce updates via rebuild/redeploy.
+    // If you need an admin API in the future, reintroduce a secure endpoint here.
 
     let filePath = path.join(ROOT, safe);
     fs.stat(filePath, (err, stats) => {
