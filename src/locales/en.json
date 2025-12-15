@@ -32,7 +32,7 @@
         "logo": "/assets/2026/challenges/ISR/logo.png",
         "subtitle": "Primary education",
         "description": "Using a simple and intuitive robotics kit – the MBot2 – programmed in a block language, similar to “Scratch”, participants must navigate a track using various sensors, avoiding any obstacles that may appear!",
-        "formUrl": "https://forms.gle/isr-registration",
+        "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeOQoW0ecDW69J9oQhoLFxAi_zxndi-IcXiqiDdF6uG11_32g/viewform",
         "rulesUrl": "/assets/2026/challenges/ISR/isr-rules.pdf",
         "bg": "/assets/2026/challenges/ISR/bg.jpg"
       },
@@ -42,7 +42,7 @@
         "logo": "/assets/2026/challenges/BOTNROLL/logo.png",
         "subtitle": "Secondary education",
         "description": "Using a robot – the Bot’N Roll ONE A – programmed in C++ for Arduino, participants must collect and deliver packages inside a simulated environment, relying on various sensors to navigate.",
-        "formUrl": "https://forms.gle/botnroll-registration",
+        "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeC4YH1sKJHknRYCPdjJd0J-xSMBnWiV76SCpAXnaNJ53r6Og/viewform",
         "rulesUrl": "/assets/2026/challenges/BOTNROLL/botnroll-rules.pdf",
         "bg": "/assets/2026/challenges/BOTNROLL/bg.jpg"
       },
@@ -52,7 +52,7 @@
         "logo": "/assets/2026/challenges/FCTUC/logo.png",
         "subtitle": "Higher education",
         "description": "Using a robot developed by specially by us, programmed in C++ for Arduino, participants must chase after another robot, a thief on the run, using the available sensors to navigate through a labyrinth.",
-        "formUrl": "https://forms.gle/fctuc-registration",
+        "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScUVbuLK83YVEB3KMk9U1-TytE4VS-Jzkz_fwnB8zRaFWVyog/viewform",
         "rulesUrl": "/assets/2026/challenges/FCTUC/fctuc-rules.pdf",
         "bg": "/assets/2026/challenges/FCTUC/bg.jpg"
       }
