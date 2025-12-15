@@ -32,7 +32,7 @@
         "logo": "/assets/2026/challenges/ISR/logo.png",
         "subtitle": "Ensino básico",
         "description": "Utilizando um kit de robótica simples e intuitivo – o MBot2 – programado numa linguagem de blocos, semelhante ao “Scratch”, os participantes devem percorrer uma pista utilizando vários sensores, evitando os obstáculos que possam surgir!",
-        "formUrl": "https://forms.gle/isr-registration",
+        "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeOQoW0ecDW69J9oQhoLFxAi_zxndi-IcXiqiDdF6uG11_32g/viewform",
         "rulesUrl": "/assets/2026/challenges/ISR/isr-rules.pdf",
         "bg": "/assets/2026/challenges/ISR/bg.jpg"
       },
@@ -42,7 +42,7 @@
         "logo": "/assets/2026/challenges/BOTNROLL/logo.png",
         "subtitle": "Ensino Secundário",
         "description": "Utilizando um robô – o Bot’N Roll ONE A – programado em C++ para Arduino, os participantes têm de recolher e entregar encomendas num ambiente simulado, recorrendo a vários sensores para navegar.",
-        "formUrl": "https://forms.gle/botnroll-registration",
+        "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeC4YH1sKJHknRYCPdjJd0J-xSMBnWiV76SCpAXnaNJ53r6Og/viewform",
         "rulesUrl": "/assets/2026/challenges/BOTNROLL/botnroll-rules.pdf",
         "bg": "/assets/2026/challenges/BOTNROLL/bg.jpg"
       },
@@ -52,7 +52,7 @@
         "logo": "/assets/2026/challenges/FCTUC/logo.png",
         "subtitle": "Ensino Superior",
         "description": "Utilizando um robô desenvolvido especialmente por nós, programado em C++ para Arduino, os participantes devem perseguir um ladrão em fuga utilizando os sensores disponíveis para navegar através de um labirinto.",
-        "formUrl": "https://forms.gle/fctuc-registration",
+        "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScUVbuLK83YVEB3KMk9U1-TytE4VS-Jzkz_fwnB8zRaFWVyog/viewform",
         "rulesUrl": "/assets/2026/challenges/FCTUC/fctuc-rules.pdf",
         "bg": "/assets/2026/challenges/FCTUC/bg.jpg"
       }
