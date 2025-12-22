@@ -474,7 +474,11 @@ export default function App() {
           <div className="team-grid">
             {team.members.map((m, i) => (
               <div key={i} className="team-member">
-                <div className="avatar" style={{ backgroundImage: `url('${m.img}')` }} />
+                <img 
+                  className="avatar" 
+                  src={m.img} 
+                  alt="" 
+                />
                 <div className="member-name">{m.name}</div>
                 <div className="member-role">{m.role}</div>
               </div>
