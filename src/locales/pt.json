@@ -33,8 +33,8 @@
         "subtitle": "Ensino básico",
         "description": "Utilizando um kit de robótica simples e intuitivo – o MBot2 – programado numa linguagem de blocos, semelhante ao “Scratch”, os participantes devem percorrer uma pista utilizando vários sensores, evitando os obstáculos que possam surgir!",
         "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeOQoW0ecDW69J9oQhoLFxAi_zxndi-IcXiqiDdF6uG11_32g/viewform",
-        "rulesUrl": "/assets/2026/challenges/ISR/isr-rules.pdf",
-        "bg": "/assets/2026/challenges/ISR/bg.jpg"
+        "rulesUrl": "/assets/2026/challenges/ISR/isr-rules.pdf",        "rulesStatus": "building",
+        "rulesMessage": "O BOTI ainda está a construir a tua prova!",        "bg": "/assets/2026/challenges/ISR/bg.jpg"
       },
       {
         "id": "botnroll",

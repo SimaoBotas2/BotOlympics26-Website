@@ -366,9 +366,15 @@ export default function App() {
                         {regLabel}
                       </a>
 
-                      <a className="btn-pill btn-pill-outline" href={c.rulesUrl} target="_blank" rel="noreferrer">
-                        {challenges.regulationLabel}
-                      </a>
+                      {c.rulesStatus === "building" ? (
+                        <span className="btn-pill btn-pill-outline" style={{ cursor: 'default', opacity: 0.7 }}>
+                          {c.rulesMessage}
+                        </span>
+                      ) : (
+                        <a className="btn-pill btn-pill-outline" href={c.rulesUrl} target="_blank" rel="noreferrer">
+                          {challenges.regulationLabel}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </article>
