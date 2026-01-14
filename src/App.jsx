@@ -519,6 +519,12 @@ export default function App() {
                 </a>
               ))}
             </div>
+            <div style={{ marginTop: '20px' }}>
+              <div style={{ fontSize: '1.05em', fontWeight: 'bold', marginBottom: '6px' }}>
+                {i18n.language && i18n.language.startsWith('pt') ? 'Edições passadas' : 'Past Editions'}
+              </div>
+              <a href="https://past.botolympics.pt/" target="_blank" rel="noreferrer" style={{ fontSize: '0.95em' }}>past.botolympics.pt</a>
+            </div>
           </div>
 
           <div className="footer-center">
