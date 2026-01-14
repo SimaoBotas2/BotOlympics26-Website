@@ -261,6 +261,16 @@
         "img": "/assets/team/Henrique_Malva.jpg"
       },
       {
+        "name": "Matilde Pereira",
+        "role": "Communication & Image",
+        "img": "/assets/team/Matilde_Pereira.jpg"
+      },
+      {
+        "name": "Afonso Gonçalves",
+        "role": "Communication & Image",
+        "img": "/assets/team/Afonso_Goncalves.jpg"
+      },
+      {
         "name": "Francisco Silva",
         "role": "IT",
         "img": "/assets/team/Francisco_Silva.jpg"
@@ -319,16 +329,6 @@
         "name": "Bernardo Grazina",
         "role": "Sponsorships & Support",
         "img": "/assets/team/Bernardo_Grazina.jpg"
-      },
-      {
-        "name": "Matilde Pereira",
-        "role": "Communication & Image",
-        "img": "/assets/team/Matilde_Pereira.jpg"
-      },
-      {
-        "name": "Afonso Gonçalves",
-        "role": "Communication & Image",
-        "img": "/assets/team/Afonso_Goncalves.jpg"
       },
       {
         "name": "Mafalda Pinho",
