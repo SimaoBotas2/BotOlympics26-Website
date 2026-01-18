@@ -273,3 +273,43 @@ Returns current challenge states.
 - **Static assets (images):** Cached with long TTL
 - **Carousel animations:** GPU-accelerated, works on Safari 9+
 - **Bundle size:** ~50KB gzipped (React + i18next + styles)
+
+---
+
+## Editar Fotos da Equipa
+
+Para aplicar transformações às fotos dos membros da equipa (zoom, filtros, etc.):
+
+1. **Abra:** `src/config/imageTransforms.js`
+2. **Adicione uma entrada:**
+   ```javascript
+   export const IMAGE_TRANSFORMS = {
+     'Nome Exato Do Membro': 'img-zoom-out',
+   };
+   ```
+
+**Transformações disponíveis:**
+- `img-zoom-out` – Reduz para 75%
+- `img-zoom-in` – Amplia para 125%
+- `img-grayscale` – Preto e branco
+- `img-sepia` – Efeito sépia
+- `img-blur` – Desfoque
+- `img-brightness-up` – Aumenta brilho
+- `img-brightness-down` – Diminui brilho
+- `img-contrast-up` – Aumenta contraste
+- `img-opacity-75` – Opacidade 75%
+
+**Exemplos:**
+```javascript
+// Uma transformação simples
+'Rodrigo Ramos': 'img-zoom-out',
+
+// Múltiplas transformações
+'João Silva': ['img-zoom-out', 'img-brightness-up'],
+
+// Várias pessoas
+'Tiago Furtado': 'img-grayscale',
+'Rodrigo Ramos': 'img-sepia',
+```
+
+⚠️ **Importante:** O nome deve coincidir EXATAMENTE com o nome em `src/locales/pt.json` (case-sensitive)

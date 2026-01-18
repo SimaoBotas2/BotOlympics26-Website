@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import FaqList from './components/FaqList';
+import TeamMember from './components/TeamMember';
 
 export default function App() {
   const { t, i18n } = useTranslation();
@@ -479,15 +480,7 @@ export default function App() {
           <h2>{team.title}</h2>
           <div className="team-grid">
             {team.members.map((m, i) => (
-              <div key={i} className="team-member">
-                <img 
-                  className="avatar" 
-                  src={m.img} 
-                  alt="" 
-                />
-                <div className="member-name">{m.name}</div>
-                <div className="member-role">{m.role}</div>
-              </div>
+              <TeamMember key={i} member={m} />
             ))}
           </div>
         </section>

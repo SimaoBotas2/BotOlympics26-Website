@@ -525,6 +525,56 @@ body {
   background-color: #2a2a2a;
 }
 
+/* IMAGE TRANSFORM CLASSES */
+/* These classes are applied via the imageTransforms config */
+/* Add new transforms here and reference them in src/config/imageTransforms.js */
+
+.img-zoom-out {
+  transform: scale(0.75);
+}
+
+.img-zoom-in {
+  transform: scale(1.25);
+}
+
+.img-grayscale {
+  filter: grayscale(1);
+}
+
+.img-sepia {
+  filter: sepia(1);
+}
+
+.img-blur {
+  filter: blur(2px);
+}
+
+.img-brightness-up {
+  filter: brightness(1.2);
+}
+
+.img-brightness-down {
+  filter: brightness(0.8);
+}
+
+.img-contrast-up {
+  filter: contrast(1.2);
+}
+
+.img-opacity-75 {
+  opacity: 0.75;
+}
+
+/* small vertical shift of image content within the circle */
+.img-shift-down-small {
+  object-position: center 25%;
+}
+
+/* tiny vertical shift (~10%) of image content within the circle */
+.img-shift-down-tiny {
+  object-position: center 40%;
+}
+
 /* MAP */
 .map-embed iframe {
   border-radius: 8px;
