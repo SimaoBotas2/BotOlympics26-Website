@@ -575,6 +575,15 @@ body {
   object-position: center 40%;
 }
 
+/* horizontal shift of image content to the right */
+.img-shift-right-small {
+  object-position: 60% center;
+}
+
+.img-shift-right-medium {
+  object-position: 80% center;
+}
+
 /* MAP */
 .map-embed iframe {
   border-radius: 8px;
