@@ -575,6 +575,11 @@ body {
   object-position: center 40%;
 }
 
+/* large vertical shift of image content within the circle */
+.img-shift-down-large {
+  object-position: center 0%;
+}
+
 /* horizontal shift of image content to the right */
 .img-shift-right-small {
   object-position: 60% center;

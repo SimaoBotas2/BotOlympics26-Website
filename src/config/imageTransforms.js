@@ -32,6 +32,7 @@ export const IMAGE_TRANSFORMS = {
   'Rodrigo Ramos': 'img-shift-down-tiny',
   'Rodrigo Gonçalves': 'img-shift-down-tiny',
   'Miguel Birsanu': 'img-shift-right-medium',
+  'Gabriel Pinto': 'img-shift-down-large',
 };
 
 /**
