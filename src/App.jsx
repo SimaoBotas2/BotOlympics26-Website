@@ -467,13 +467,6 @@ export default function App() {
               </div>
             </div>
           ))}
-          <p className="sponsor-contact" dangerouslySetInnerHTML={{
-            __html: sponsors.contactNote.replace(
-              /* email regex to convert all email in the text to mailto link */
-              /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi,
-              (email) => `<a href="mailto:${email}">${email}</a>`
-            )
-          }} />
         </section>
 
         <section className="wrap section" id="team">

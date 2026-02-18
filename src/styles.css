@@ -459,35 +459,77 @@ body {
 
 /* SPONSORS */
 .sponsor-tier {
-  margin-top: 18px;
+  margin-top: 30px;
   padding-top: 12px;
 }
 
 .tier-name {
   font-weight: 700;
   color: var(--accent-2);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-size: 30px;
 }
 
 .tier-logos {
   display: flex;
-  gap: 18px;
+  gap: 32px;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .tier-logos img {
-  max-height: 60px;
+  max-height: 140px;
+  max-width: 280px;
   filter: grayscale(0.02);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  object-fit: contain;
+}
+
+.tier-logos a:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0);
 }
 
 .tier-underline {
   height: 4px;
   width: 100%;
-  margin: 8px 0 18px;
+  margin: 12px 0 24px;
   border-radius: 2px;
   /* color is set inline from the React component via style={{ backgroundColor: tier.color }} */
+}
+
+/* responsive: tablet and smaller */
+@media (max-width: 900px) {
+  .tier-logos {
+    gap: 24px;
+  }
+
+  .tier-logos img {
+    max-height: 120px;
+    max-width: 240px;
+  }
+}
+
+/* responsive: mobile */
+@media (max-width: 600px) {
+  .sponsor-tier {
+    margin-top: 24px;
+  }
+
+  .tier-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .tier-logos {
+    gap: 16px;
+  }
+
+  .tier-logos img {
+    max-height: 90px;
+    max-width: 180px;
+  }
 }
 
 /* TEAM */

@@ -142,22 +142,102 @@
       {
         "name": "Institutional",
         "color": "#ff003d",
-        "sponsors": []
+        "sponsors": [
+          {
+            "name": "ISR",
+            "url": "https://www.isr.uc.pt/",
+            "logo": "/assets/2026/sponsors/isr.png"
+          },
+          {
+            "name": "Câmara Municipal de Coimbra",
+            "url": "https://www.cm-coimbra.pt/",
+            "logo": "/assets/2026/sponsors/cmcoimbra.png"
+          },
+          {
+            "name": "DEEC",
+            "url": "https://web.deec.uc.pt/",
+            "logo": "/assets/2026/sponsors/deec.png"
+          },
+          {
+            "name": "FCTUC",
+            "url": "https://www.uc.pt/fctuc/",
+            "logo": "/assets/2026/sponsors/fctuc.png"
+          },
+          {
+            "name": "Ansol",
+            "url": "https://ansol.org/",
+            "logo": "/assets/2026/sponsors/ansol.png"
+          }
+        ]
       },
       {
         "name": "Diamond",
         "color": "#00cbff",
-        "sponsors": []
+        "sponsors": [
+          {
+            "name": "Valmet",
+            "url": "https://www.valmet.com/pt/",
+            "logo": "/assets/2026/sponsors/valmet.png"
+          },
+          {
+            "name": "Bot N' Roll",
+            "url": "https://www.botnroll.com",
+            "logo": "/assets/2026/sponsors/botnroll.png"
+          }
+        ]
       },
       {
         "name": "Gold",
         "color": "#edd200",
-        "sponsors": []
+        "sponsors": [
+          {
+            "name": "Mauser",
+            "url": "https://mauser.pt/",
+            "logo": "/assets/2026/sponsors/mauser.png"
+          },
+          {
+            "name": "Ordem dos Engenheiros",
+            "url": "https://www.ordemdosengenheiros.pt/pt/",
+            "logo": "/assets/2026/sponsors/ordem.png"
+          }
+        ]
       },
       {
         "name": "Silver",
-        "color": "#ececec",
-        "sponsors": []
+        "color": "#c0c0c0",
+        "sponsors": [
+          {
+            "name": "Areal",
+            "url": "https://www.arealeditores.pt/",
+            "logo": "/assets/2026/sponsors/areal.png"
+          },
+          {
+            "name": "PtRobotics",
+            "url": "https://www.ptrobotics.com/",
+            "logo": "/assets/2026/sponsors/ptrobotics.png"
+          },
+          {
+            "name": "Fresbeira",
+            "url": "https://fresbeira.pt/",
+            "logo": "/assets/2026/sponsors/fresbeira.png"
+          }
+        ]
+      },
+      {
+        "name": "Support",
+        "color": "#FFFFFF",
+        "sponsors": [
+          {
+            "name": "Alma Shopping",
+            "url": "https://almashopping.pt/",
+            "logo": "/assets/2026/sponsors/alma.png"
+          },
+          {
+            "name": "PCBWAY",
+            "url": "https://www.pcbway.com/",
+            "logo": "/assets/2026/sponsors/pcbway.png"
+          }
+        ]
       }
     ],
     "contactNote": "Interested in sponsoring our event? Contact us via patrocinios@botolympics.pt."
