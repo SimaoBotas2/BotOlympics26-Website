@@ -31,8 +31,9 @@ export const IMAGE_TRANSFORMS = {
   'Francisco Silva': 'img-shift-down-small',
   'Rodrigo Ramos': 'img-shift-down-tiny',
   'Rodrigo Gonçalves': 'img-shift-down-tiny',
-  'Miguel Birsanu': 'img-shift-right-medium',
+  'Miguel Birsanu': 'img-shift-left-small',
   'Gabriel Pinto': 'img-shift-down-large',
+  'Ricardo Sardinha': 'img-shift-left-medium-up-tiny',
 };
 
 /**

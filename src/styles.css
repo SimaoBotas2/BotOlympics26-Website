@@ -623,12 +623,31 @@ body {
 }
 
 /* horizontal shift of image content to the right */
+.img-shift-right-tiny {
+  object-position: 55% center;
+}
+
 .img-shift-right-small {
   object-position: 60% center;
 }
 
 .img-shift-right-medium {
   object-position: 80% center;
+}
+
+/* horizontal shift of image content to the left (opposite of right-medium) */
+.img-shift-left-medium {
+  object-position: 30% center;
+}
+
+/* mild shift of visible content to the right */
+.img-shift-left-small {
+  object-position: 40% center;
+}
+
+/* Ricardo: horizontal left + slightly higher vertical focus */
+.img-shift-left-medium-up-tiny {
+  object-position: 30% 40%;
 }
 
 /* MAP */

@@ -33,8 +33,8 @@
         "subtitle": "Primary education",
         "description": "Using a simple and intuitive robotics kit – the MBot2 – programmed in a block language, similar to “Scratch”, participants must navigate a track using various sensors, avoiding any obstacles that may appear!",
         "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeOQoW0ecDW69J9oQhoLFxAi_zxndi-IcXiqiDdF6uG11_32g/viewform",
-        "rulesUrl": "/assets/2026/challenges/ISR/isr-rules.pdf",        "rulesStatus": "building",
-        "rulesMessage": "BOTI is still building your challenge!",        "bg": "/assets/2026/challenges/ISR/bg.jpg"
+        "rulesUrl": "/assets/2026/challenges/ISR/isr-rules.pdf",
+        "bg": "/assets/2026/challenges/ISR/bg.jpg"
       },
       {
         "id": "botnroll",
