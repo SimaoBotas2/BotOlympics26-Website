@@ -135,14 +135,14 @@
     "description": "In few words, BotOlympics’25…",
     "galleryPath": "/assets/2025/gallery"
   },
-  "sponsors": {
-    "title": "Sponsors",
-    "description": "BotOlympics needs your support! Contact us at patrocinios@botolympics.pt to learn more about sponsorship opportunities and benefits.",
+  "partners": {
+    "title": "Partners",
+    "description": "BotOlympics needs your support! Contact us at patrocinios@botolympics.pt to learn more about partnership opportunities and benefits.",
     "tiers": [
       {
         "name": "Institutional",
         "color": "#ff003d",
-        "sponsors": [
+        "partners": [
           {
             "name": "ISR",
             "url": "https://www.isr.uc.pt/",
@@ -173,7 +173,7 @@
       {
         "name": "Diamond",
         "color": "#00cbff",
-        "sponsors": [
+        "partners": [
           {
             "name": "Valmet",
             "url": "https://www.valmet.com/pt/",
@@ -189,7 +189,7 @@
       {
         "name": "Gold",
         "color": "#edd200",
-        "sponsors": [
+        "partners": [
           {
             "name": "Mauser",
             "url": "https://mauser.pt/",
@@ -205,7 +205,7 @@
       {
         "name": "Silver",
         "color": "#c0c0c0",
-        "sponsors": [
+        "partners": [
           {
             "name": "Areal",
             "url": "https://www.arealeditores.pt/",
@@ -226,7 +226,7 @@
       {
         "name": "Support",
         "color": "#FFFFFF",
-        "sponsors": [
+        "partners": [
           {
             "name": "Alma Shopping",
             "url": "https://almashopping.pt/",
@@ -240,7 +240,7 @@
         ]
       }
     ],
-    "contactNote": "Interested in sponsoring our event? Contact us via patrocinios@botolympics.pt."
+    "contactNote": "Interested in partnering with us? Contact us via patrocinios@botolympics.pt."
   },
   "team": {
     "title": "Our Team",

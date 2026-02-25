@@ -15,7 +15,7 @@ export default function App() {
   const schedule = t('schedule', { returnObjects: true });
   const faq = t('faq', { returnObjects: true });
   const previous = t('previousEdition', { returnObjects: true });
-  const sponsors = t('sponsors', { returnObjects: true });
+  const partners = t('partners', { returnObjects: true });
   const team = t('team', { returnObjects: true });
   const location = t('location', { returnObjects: true });
   const footer = t('footer', { returnObjects: true });
@@ -441,17 +441,17 @@ export default function App() {
           )}
         </section>
 
-        <section className="wrap section" id="sponsors">
-          <h2>{sponsors.title}</h2>
+        <section className="wrap section" id="partners">
+          <h2>{partners.title}</h2>
           <p dangerouslySetInnerHTML={{
-            __html: sponsors.description.replace(
+            __html: partners.description.replace(
               /* email regex to convert all email in the text to mailto link */
               /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi,
               (email) => `<a href="mailto:${email}">${email}</a>`
             )
           }} />
-          {sponsors.tiers.map((tier, ti) => (
-            <div key={ti} className="sponsor-tier" style={{ textAlign: ti % 2 === 1 ? 'left' : 'right' }}>
+          {partners.tiers.map((tier, ti) => (
+            <div key={ti} className="partner-tier" style={{ textAlign: ti % 2 === 1 ? 'left' : 'right' }}>
               <h3 className="tier-name" style={{ color: tier.color }}>{tier.name}</h3>
               {/* colored underline matching the tier color */}
               <div
@@ -459,8 +459,8 @@ export default function App() {
                 style={{ backgroundColor: tier.color }}
               />
               <div className="tier-logos">
-                {tier.sponsors.map((s, si) => (
-                  <a key={si} href={s.url} target="_blank" rel="noreferrer" className="sponsor-link">
+                {tier.partners.map((s, si) => (
+                  <a key={si} href={s.url} target="_blank" rel="noreferrer" className="partner-link">
                     <img src={s.logo} alt={s.name} />
                   </a>
                 ))}

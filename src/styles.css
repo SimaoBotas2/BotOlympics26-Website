@@ -457,8 +457,8 @@ body {
   display: block;
 }
 
-/* SPONSORS */
-.sponsor-tier {
+/* PARTNERS */
+.partner-tier {
   margin-top: 30px;
   padding-top: 12px;
 }
@@ -513,7 +513,7 @@ body {
 
 /* responsive: mobile */
 @media (max-width: 600px) {
-  .sponsor-tier {
+  .partner-tier {
     margin-top: 24px;
   }
 
