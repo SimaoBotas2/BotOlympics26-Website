@@ -302,6 +302,7 @@ export default function App() {
       {/*--------------------------- DATE SECTION ---------------------------*/}
       <section className="date-section">
         <h2>{date.text}</h2>
+        {date.kids && <p className="date-kids">{date.kids}</p>}
       </section>
 
       <main>
