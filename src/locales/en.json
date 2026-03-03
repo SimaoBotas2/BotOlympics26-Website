@@ -200,6 +200,16 @@
             "name": "Ordem dos Engenheiros",
             "url": "https://www.ordemdosengenheiros.pt/pt/",
             "logo": "/assets/2026/partners/ordem.png"
+          },
+          {
+            "name": "Laço Decimal",
+            "url": "https://www.instagram.com/lacodecimal/",
+            "logo": "/assets/2026/partners/lacodecimal.png"
+          },
+          {
+            "name": "Critical Software",
+            "url": "https://criticalsoftware.com/pt/",
+            "logo": "/assets/2026/partners/critical.png"
           }
         ]
       },
@@ -237,6 +247,21 @@
             "name": "PCBWAY",
             "url": "https://www.pcbway.com/",
             "logo": "/assets/2026/partners/pcbway.png"
+          },
+          {
+            "name": "Redbull",
+            "url": "https://www.redbull.com/",
+            "logo": "/assets/2026/partners/redbull.png"
+          },
+          {
+            "name": "Robothink",
+            "url": "https://robothink.pt/",
+            "logo": "/assets/2026/partners/robothink.png"
+          },
+          {
+            "name": "UC Exploratório",
+            "url": "https://www.exploratorio.pt/",
+            "logo": "/assets/2026/partners/exploratorio.png"
           }
         ]
       }
