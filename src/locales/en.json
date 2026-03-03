@@ -509,6 +509,11 @@
         "name": "NEEEC",
         "url": "https://neeec.pt",
         "logo": "/assets/organization/NEEEC.png"
+      },
+      {
+        "name": "AAC",
+        "url": "https://academica.pt/",
+        "logo": "/assets/organization/AAC.png"
       }
     ]
   }
