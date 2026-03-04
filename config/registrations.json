@@ -1,5 +1,5 @@
 {
   "isr": "before",
-  "botnroll": "after",
+  "botnroll": "before",
   "fctuc": "before"
 }
