@@ -262,6 +262,11 @@
             "name": "UC Exploratório",
             "url": "https://www.exploratorio.pt/",
             "logo": "/assets/2026/partners/exploratorio.png"
+          },
+          {
+            "name": "McDonalds",
+            "url": "https://www.mcdonalds.pt/",
+            "logo": "/assets/2026/partners/mcdonalds.png"
           }
         ]
       }
