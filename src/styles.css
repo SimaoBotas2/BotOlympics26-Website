@@ -1114,6 +1114,18 @@ a:focus {
   color: #cd7f32;
 }
 
+.leaderboard-top-1 .rank-badge {
+  color: #ffd700;
+}
+
+.leaderboard-top-2 .rank-badge {
+  color: #c0c0c0;
+}
+
+.leaderboard-top-3 .rank-badge {
+  color: #cd7f32;
+}
+
 @media (max-width: 768px) {
   .leaderboard-table th,
   .leaderboard-table td {

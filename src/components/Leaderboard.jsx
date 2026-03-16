@@ -188,7 +188,7 @@ export default function Leaderboard() {
               className={`lang-btn ${autoUpdate ? 'active' : ''}`}
               style={{ marginRight: '10px' }}
             >
-              {autoUpdate ? '🔄' : '⏸'}  {i18n.language?.startsWith('pt') ? (autoUpdate ? 'Ao vivo' : 'Parado') : (autoUpdate ? 'Live' : 'Paused')}
+              {i18n.language?.startsWith('pt') ? (autoUpdate ? 'Ao vivo' : 'Parado') : (autoUpdate ? 'Live' : 'Paused')}
             </button>
             <button
               onClick={fetchLeaderboard}
@@ -206,9 +206,9 @@ export default function Leaderboard() {
       <main style={{ paddingTop: '120px', minHeight: '100vh' }}>
         <section className="wrap section" style={{ marginTop: '40px' }}>
           <h2 style={{ marginBottom: '10px' }}>
-            {i18n.language?.startsWith('pt') ? 'Classificações da Competição' : 'Competition Leaderboard'}
+            {i18n.language?.startsWith('pt') ? 'Classificações' : 'Leaderboard'}
           </h2>
-          
+
           {lastUpdated && (
             <p style={{ color: 'var(--muted)', fontSize: '14px', marginBottom: '20px' }}>
               {i18n.language?.startsWith('pt') ? 'Atualizado' : 'Updated'}: {lastUpdated.toLocaleTimeString(i18n.language)}
@@ -276,7 +276,7 @@ export default function Leaderboard() {
                       >
                         <td className="leaderboard-rank">
                           <span className="rank-badge">
-                            {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : idx + 1}
+                            {idx + 1}
                           </span>
                         </td>
                         {displayHeaders.map(header => (
