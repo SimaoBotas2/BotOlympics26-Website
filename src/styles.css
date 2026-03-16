@@ -502,6 +502,14 @@ body {
   filter: grayscale(0);
 }
 
+.tier-logos img[alt="McDonalds"] {
+  transform: scale(2);
+}
+
+.tier-logos a:hover img[alt="McDonalds"] {
+  transform: scale(2.16);
+}
+
 .tier-underline {
   height: 4px;
   width: 100%;
