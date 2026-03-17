@@ -95,6 +95,11 @@ body {
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
+  font-family: 'Poppins', system-ui, Arial;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3);
 }
 
 .btn-cta:hover {

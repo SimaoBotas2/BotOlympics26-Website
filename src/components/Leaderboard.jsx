@@ -185,14 +185,14 @@ export default function Leaderboard() {
           <div className="brand-right">
             <button
               onClick={() => setAutoUpdate(!autoUpdate)}
-              className={`lang-btn ${autoUpdate ? 'active' : ''}`}
+              className={`btn-cta ${autoUpdate ? 'active' : ''}`}
               style={{ marginRight: '10px' }}
             >
               {i18n.language?.startsWith('pt') ? (autoUpdate ? 'Ao vivo' : 'Parado') : (autoUpdate ? 'Live' : 'Paused')}
             </button>
             <button
               onClick={fetchLeaderboard}
-              className="lang-btn"
+              className="btn-cta"
               disabled={loading}
               style={{ marginRight: '10px' }}
             >
