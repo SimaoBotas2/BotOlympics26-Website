@@ -19,6 +19,10 @@ export default function Leaderboard() {
   const [searchParams] = useSearchParams();
   const contest = searchParams.get('contest') || 'isr'; // Default to 'isr'
   const normalizedContest = contest.toLowerCase();
+  const { i18n, t } = useTranslation();
+  
+  // Get partners data from translations
+  const partners = t('partners', { returnObjects: true });
   
   // Map contests to environment variables
   const sheetUrlMap = {
@@ -29,7 +33,7 @@ export default function Leaderboard() {
   
   const GOOGLE_SHEET_CSV_URL = sheetUrlMap[normalizedContest] || '';
 
-  const { i18n } = useTranslation();
+  const { i18n: i18nInstance } = useTranslation();
   const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,6 +42,10 @@ export default function Leaderboard() {
   const [rowAnimations, setRowAnimations] = useState({}); // Track animations for each row
   const rowRefsMap = useRef(new Map()); // Store refs to row elements
   const prevPositions = useRef(new Map()); // Store previous positions for FLIP
+
+  // Extract Diamond and Gold sponsors
+  const diamondTier = partners.tiers?.find(tier => tier.name === 'Diamond');
+  const goldTier = partners.tiers?.find(tier => tier.name === 'Gold');
 
   // Parse CSV string into array of objects
   const parseCSV = (csv) => {
@@ -191,12 +199,62 @@ export default function Leaderboard() {
   }, [sortedLeaderboard, displayHeaders]);
 
   return (
-    <div className="bo-site">
+    <div className="bo-site leaderboard-page">
+      {/* Left Sidebar - Diamond Sponsors */}
+      {diamondTier && diamondTier.partners?.length > 0 && (
+        <aside className="sponsors-sidebar sponsors-left">
+          <div className="sponsors-column">
+            <h3 className="sponsors-title" style={{ color: diamondTier.color }}>
+              {diamondTier.name}
+            </h3>
+            <div className="sponsors-logos">
+              {diamondTier.partners.map((sponsor, idx) => (
+                <a
+                  key={idx}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="sponsor-link"
+                  title={sponsor.name}
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </aside>
+      )}
+
+      {/* Right Sidebar - Gold Sponsors */}
+      {goldTier && goldTier.partners?.length > 0 && (
+        <aside className="sponsors-sidebar sponsors-right">
+          <div className="sponsors-column">
+            <h3 className="sponsors-title" style={{ color: goldTier.color }}>
+              {goldTier.name}
+            </h3>
+            <div className="sponsors-logos">
+              {goldTier.partners.map((sponsor, idx) => (
+                <a
+                  key={idx}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="sponsor-link"
+                  title={sponsor.name}
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </aside>
+      )}
+
       <header className="bo-header">
         <div className="wrap header-row">
           <div className="brand-left">
             <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 700, color: 'var(--accent)' }}>
-              {i18n.language?.startsWith('pt') ? 'Classificações' : 'Leaderboard'} - {normalizedContest.toUpperCase()}
+              {i18nInstance.language?.startsWith('pt') ? 'Classificações' : 'Leaderboard'} - {normalizedContest.toUpperCase()}
             </h1>
           </div>
           <div className="brand-right">
@@ -214,7 +272,7 @@ export default function Leaderboard() {
               className={`btn-cta ${autoUpdate ? 'active' : ''}`}
               style={{ marginRight: '10px' }}
             >
-              {i18n.language?.startsWith('pt') ? (autoUpdate ? 'Ao vivo' : 'Parado') : (autoUpdate ? 'Live' : 'Paused')}
+              {i18nInstance.language?.startsWith('pt') ? (autoUpdate ? 'Ao vivo' : 'Parado') : (autoUpdate ? 'Live' : 'Paused')}
             </button>
             <button
               onClick={fetchLeaderboard}
@@ -222,9 +280,9 @@ export default function Leaderboard() {
               disabled={loading}
               style={{ marginRight: '10px' }}
             >
-              {i18n.language?.startsWith('pt') ? 'Atualizar' : 'Refresh'}
+              {i18nInstance.language?.startsWith('pt') ? 'Atualizar' : 'Refresh'}
             </button>
-            <a className="btn-cta" href="/">{i18n.language?.startsWith('pt') ? 'Início' : 'Home'}</a>
+            <a className="btn-cta" href="/">{i18nInstance.language?.startsWith('pt') ? 'Início' : 'Home'}</a>
           </div>
         </div>
       </header>
@@ -232,18 +290,18 @@ export default function Leaderboard() {
       <main style={{ paddingTop: '120px', minHeight: '100vh' }}>
         <section className="wrap section" style={{ marginTop: '40px' }}>
           <h2 style={{ marginBottom: '10px' }}>
-            {i18n.language?.startsWith('pt') ? 'Classificações' : 'Leaderboard'}
+            {i18nInstance.language?.startsWith('pt') ? 'Classificações' : 'Leaderboard'}
           </h2>
 
           {lastUpdated && (
             <p style={{ color: 'var(--muted)', fontSize: '14px', marginBottom: '20px' }}>
-              {i18n.language?.startsWith('pt') ? 'Atualizado' : 'Updated'}: {lastUpdated.toLocaleTimeString(i18n.language)}
+              {i18nInstance.language?.startsWith('pt') ? 'Atualizado' : 'Updated'}: {lastUpdated.toLocaleTimeString(i18nInstance.language)}
             </p>
           )}
 
           {loading && leaderboard.length === 0 && (
             <div style={{ textAlign: 'center', padding: '40px' }}>
-              <p>{i18n.language?.startsWith('pt') ? 'A carregar...' : 'Loading...'}</p>
+              <p>{i18nInstance.language?.startsWith('pt') ? 'A carregar...' : 'Loading...'}</p>
             </div>
           )}
 
@@ -256,7 +314,7 @@ export default function Leaderboard() {
               color: '#ff6b6b',
               marginBottom: '20px'
             }}>
-              <strong>{i18n.language?.startsWith('pt') ? 'Erro' : 'Error'}:</strong> {error}
+              <strong>{i18nInstance.language?.startsWith('pt') ? 'Erro' : 'Error'}:</strong> {error}
             </div>
           )}
 
@@ -265,7 +323,7 @@ export default function Leaderboard() {
               <table className="leaderboard-table">
                 <thead>
                   <tr>
-                    <th style={{ width: '60px' }}>#{i18n.language?.startsWith('pt') ? 'Pos' : 'Pos'}</th>
+                    <th style={{ width: '60px' }}>#{i18nInstance.language?.startsWith('pt') ? 'Pos' : 'Pos'}</th>
                     {displayHeaders.map(header => (
                       <th key={header}>{header}</th>
                     ))}
@@ -320,19 +378,12 @@ export default function Leaderboard() {
 
           {!loading && leaderboard.length === 0 && !error && (
             <div style={{ textAlign: 'center', padding: '40px', color: 'var(--muted)' }}>
-              <p>{i18n.language?.startsWith('pt') ? 'Nenhum dado de classificação disponível' : 'No leaderboard data available'}</p>
+              <p>{i18nInstance.language?.startsWith('pt') ? 'Nenhum dado de classificação disponível' : 'No leaderboard data available'}</p>
             </div>
           )}
         </section>
       </main>
 
-      <footer className="site-footer" role="contentinfo">
-        <div className="wrap footer-inner" style={{ textAlign: 'center' }}>
-          <p style={{ color: 'var(--muted)', fontSize: '12px' }}>
-            {i18n.language?.startsWith('pt') ? 'A classificação atualiza-se automaticamente a cada 5 segundos' : 'Leaderboard updates automatically every 5 seconds'}
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
