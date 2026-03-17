@@ -286,6 +286,7 @@ export default function Home() {
             >
               EN
             </button>
+            <a className="btn-cta" href="/leaderboard">{i18n.language && i18n.language.startsWith('pt') ? 'Classificações' : 'Leaderboard'}</a>
             <a className="btn-cta" href="#challenges">{header.registerText}</a>
           </div>
         </div>
