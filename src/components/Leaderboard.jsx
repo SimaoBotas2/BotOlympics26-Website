@@ -1,17 +1,34 @@
 import React, { useState, useEffect, useRef, useLayoutEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
 
 /**
  * Leaderboard component that fetches CSV data from a Google Sheet.
  * 
  * SETUP: Ensure your Google Sheet is set to "Anyone with the link can view"
  * Then append /export?format=csv to the sheet URL.
- * Set GOOGLE_SHEET_CSV_URL environment variable or update the URL below.
+ * Set environment variables for each contest:
+ *   VITE_LEADERBOARD_ISR_SHEET_URL
+ *   VITE_LEADERBOARD_BOTNROLL_SHEET_URL
+ *   VITE_LEADERBOARD_FCTUC_SHEET_URL
+ * 
+ * Usage: /leaderboard?contest=isr (or botnroll, fctuc)
  */
 
-const GOOGLE_SHEET_CSV_URL = import.meta.env.VITE_LEADERBOARD_SHEET_URL || '';
-
 export default function Leaderboard() {
+  const [searchParams] = useSearchParams();
+  const contest = searchParams.get('contest') || 'isr'; // Default to 'isr'
+  const normalizedContest = contest.toLowerCase();
+  
+  // Map contests to environment variables
+  const sheetUrlMap = {
+    'isr': import.meta.env.VITE_LEADERBOARD_ISR_SHEET_URL || '',
+    'botnroll': import.meta.env.VITE_LEADERBOARD_BOTNROLL_SHEET_URL || '',
+    'fctuc': import.meta.env.VITE_LEADERBOARD_FCTUC_SHEET_URL || ''
+  };
+  
+  const GOOGLE_SHEET_CSV_URL = sheetUrlMap[normalizedContest] || '';
+
   const { i18n } = useTranslation();
   const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -43,7 +60,7 @@ export default function Leaderboard() {
   // Fetch and update leaderboard data
   const fetchLeaderboard = async () => {
     if (!GOOGLE_SHEET_CSV_URL) {
-      setError('Leaderboard URL not configured');
+      setError(`Leaderboard not configured for contest: ${normalizedContest}. Please check your .env file.`);
       setLoading(false);
       return;
     }
@@ -179,10 +196,19 @@ export default function Leaderboard() {
         <div className="wrap header-row">
           <div className="brand-left">
             <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 700, color: 'var(--accent)' }}>
-              {i18n.language?.startsWith('pt') ? 'Classificações' : 'Leaderboard'}
+              {i18n.language?.startsWith('pt') ? 'Classificações' : 'Leaderboard'} - {normalizedContest.toUpperCase()}
             </h1>
           </div>
           <div className="brand-right">
+            <select
+              value={normalizedContest}
+              onChange={(e) => window.location.href = `/leaderboard?contest=${e.target.value}`}
+              className="contest-selector"
+            >
+              <option value="isr">ISR</option>
+              <option value="botnroll">BOT NROLL</option>
+              <option value="fctuc">FCTUC</option>
+            </select>
             <button
               onClick={() => setAutoUpdate(!autoUpdate)}
               className={`btn-cta ${autoUpdate ? 'active' : ''}`}
