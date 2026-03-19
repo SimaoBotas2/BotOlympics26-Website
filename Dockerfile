@@ -5,6 +5,9 @@ WORKDIR /app
 # copy package manifest first for caching
 COPY package.json package-lock.json* ./
 RUN npm ci --silent || npm install --silent
+# Add build timestamp to invalidate cache when source files change
+ARG BUILD_DATE=unknown
+RUN echo "Build date: ${BUILD_DATE}"
 COPY . .
 # fail early if translations shapes mismatch; prevents creating an image that would serve an inconsistent site
 RUN npm run check:i18n && npm run build
