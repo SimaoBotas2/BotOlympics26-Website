@@ -43,7 +43,7 @@ export default function Leaderboard() {
   const rowRefsMap = useRef(new Map()); // Store refs to row elements
   const prevPositions = useRef(new Map()); // Store previous positions for FLIP
 
-  // Extract Diamond and Gold sponsors
+  // Extract Diamond and Gold partners
   const diamondTier = partners.tiers?.find(tier => tier.name === 'Diamond');
   const goldTier = partners.tiers?.find(tier => tier.name === 'Gold');
 
@@ -200,24 +200,24 @@ export default function Leaderboard() {
 
   return (
     <div className="bo-site leaderboard-page">
-      {/* Left Sidebar - Diamond Sponsors */}
+      {/* Left Sidebar - Diamond Partners */}
       {diamondTier && diamondTier.partners?.length > 0 && (
-        <aside className="sponsors-sidebar sponsors-left">
-          <div className="sponsors-column">
-            <h3 className="sponsors-title" style={{ color: diamondTier.color }}>
+        <aside className="partners-sidebar partners-left">
+          <div className="partners-column">
+            <h3 className="partners-title" style={{ color: diamondTier.color }}>
               {diamondTier.name}
             </h3>
-            <div className="sponsors-logos">
-              {diamondTier.partners.map((sponsor, idx) => (
+            <div className="partners-logos">
+              {diamondTier.partners.map((partner, idx) => (
                 <a
                   key={idx}
-                  href={sponsor.url}
+                  href={partner.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="sponsor-link"
-                  title={sponsor.name}
+                  className="partner-link"
+                  title={partner.name}
                 >
-                  <img src={sponsor.logo} alt={sponsor.name} />
+                  <img src={partner.logo} alt={partner.name} />
                 </a>
               ))}
             </div>
@@ -225,24 +225,24 @@ export default function Leaderboard() {
         </aside>
       )}
 
-      {/* Right Sidebar - Gold Sponsors */}
+      {/* Right Sidebar - Gold Partners */}
       {goldTier && goldTier.partners?.length > 0 && (
-        <aside className="sponsors-sidebar sponsors-right">
-          <div className="sponsors-column">
-            <h3 className="sponsors-title" style={{ color: goldTier.color }}>
+        <aside className="partners-sidebar partners-right">
+          <div className="partners-column">
+            <h3 className="partners-title" style={{ color: goldTier.color }}>
               {goldTier.name}
             </h3>
-            <div className="sponsors-logos">
-              {goldTier.partners.map((sponsor, idx) => (
+            <div className="partners-logos">
+              {goldTier.partners.map((partner, idx) => (
                 <a
                   key={idx}
-                  href={sponsor.url}
+                  href={partner.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="sponsor-link"
-                  title={sponsor.name}
+                  className="partner-link"
+                  title={partner.name}
                 >
-                  <img src={sponsor.logo} alt={sponsor.name} />
+                  <img src={partner.logo} alt={partner.name} />
                 </a>
               ))}
             </div>
