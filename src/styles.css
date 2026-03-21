@@ -1031,14 +1031,17 @@ a:focus {
 /* LEADERBOARD STYLES */
 .leaderboard-container {
   overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(30, 144, 255, 0.15);
   margin: 20px 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .leaderboard-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   background: var(--card);
 }
@@ -1150,10 +1153,25 @@ a:focus {
 }
 
 @media (max-width: 480px) {
+  .wrap {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  main > .section {
+    padding: 0;
+  }
+
   .leaderboard-container {
-    margin: 16px -28px;
+    margin: 16px 0;
     border-radius: 0;
     box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .leaderboard-table {
+    min-width: 500px;
   }
 
   .leaderboard-table th,
@@ -1176,20 +1194,21 @@ a:focus {
 /* LEADERBOARD PAGE SPONSORS SIDEBARS */
 .leaderboard-page {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
 }
 
 .sponsors-sidebar {
-  position: fixed;
-  top: 180px;
-  width: 180px;
-  height: calc(100vh - 180px);
+  flex: 0 0 10%;
+  margin-top: 180px;
   overflow-y: auto;
   z-index: 20;
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
@@ -1212,11 +1231,17 @@ a:focus {
 }
 
 .sponsors-left {
-  left: 20px;
+  order: 1;
 }
 
 .sponsors-right {
-  right: 20px;
+  order: 3;
+}
+
+.leaderboard-page > main {
+  flex: 0 0 80%;
+  order: 2;
+  width: 80%;
 }
 
 .sponsors-column {
@@ -1280,9 +1305,12 @@ a:focus {
 /* Media queries for sponsor sidebars */
 @media (max-width: 1200px) {
   .sponsors-sidebar {
-    width: 180px;
-    height: calc(100vh - 180px);
-    top: 160px;
+    flex: 0 0 10%;
+  }
+
+  .leaderboard-page > main {
+    flex: 0 0 80%;
+    width: 80%;
   }
 
   .sponsor-link {
@@ -1292,30 +1320,67 @@ a:focus {
 }
 
 @media (max-width: 900px) {
+  .header-row {
+    gap: 8px;
+  }
+
+  .brand-right {
+    gap: 8px;
+  }
+
+  .btn-cta {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+
+  .contest-selector {
+    font-size: 13px;
+  }
+
+  .leaderboard-page {
+    flex-direction: column;
+  }
+
   .sponsors-sidebar {
-    position: relative;
+    flex: 0 0 auto;
+    margin-top: 0;
     width: 100%;
     max-height: none;
-    top: auto;
-    padding: 10px 0;
-    margin: 20px 0;
+    padding: 20px 10px;
+    margin: 30px 0;
     overflow-y: visible;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    order: unset;
   }
 
-  .sponsors-left,
+  .sponsors-left {
+    order: unset;
+  }
+
   .sponsors-right {
-    left: auto;
-    right: auto;
+    order: unset;
+  }
+
+  .leaderboard-page > main {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: 0px;
+    order: -1;
+    display: flex;
+    justify-content: left;
+  }
+
+  .leaderboard-page > header {
+    order: -2;
   }
 
   .sponsors-column {
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
   }
 
   .sponsors-title {
@@ -1324,26 +1389,71 @@ a:focus {
 
   .sponsors-logos {
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .sponsor-link {
-    width: 140px;
-    height: 140px;
-    max-width: 140px;
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
   }
 }
 
 @media (max-width: 480px) {
-  .sponsors-sidebar {
-    padding: 10px 0;
-    margin: 15px 0;
+  .wrap {
+    padding: 16px;
+  }
+
+  .header-row {
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 12px;
+  }
+
+  .brand-left {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .brand-left h1 {
+    font-size: 18px !important;
+  }
+
+  .brand-right {
+    flex: 1 1 100%;
+    width: 100%;
     gap: 8px;
+    justify-content: space-between;
+  }
+
+  .btn-cta {
+    padding: 6px 10px !important;
+    font-size: 12px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .contest-selector {
+    padding: 6px 8px;
+    font-size: 12px;
+    flex: 1 1 auto;
+    margin-right: 0;
+  }
+
+  .sponsors-sidebar {
+    padding: 15px 8px;
+    margin: 5px 0;
+    gap: 10px;
+  }
+
+  .sponsors-column {
+    gap: 10px;
   }
 
   .sponsors-logos {
-    gap: 8px;
+    gap: 10px;
   }
 
   .sponsor-link {
